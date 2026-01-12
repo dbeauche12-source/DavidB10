@@ -24,13 +24,13 @@
   </script>
 
   <body>
-    <section id="landing-page">
+    <section id="landing-page" onmousemove="moveBackground(event)">
       <nav class="nav">
         <figure>
           <img id="personal-logo" src="./content/logo.svg" alt="" />
         </figure>
         <ul class="nav__link--list">
-          <li class="nav__link">
+          <li class="nav__link" onclick="toggleModal()">
             <a
               href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
@@ -39,19 +39,19 @@
           </li>
           <li class="nav__link">
             <a
-              href="#"
+              href="#projects"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
               >Projects</a
             >
           </li>
-          <li class="nav__link">
+          <li class="nav__link" onclick="toggleModal()">
             <a
               href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
               >Contact</a
             >
           </li>
-          <li class="nav__link">
+          <li class="nav__link click" onclick="toggleContrast()">
             <a
               href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
@@ -63,12 +63,12 @@
       <first class="first">
         <div class="first__content">
           <h1 class="title">Hey</h1>
-          <h1 class="title title--orange">I'm David</h1>
+          <h1 class="title"><span class="orange">I'm David</span></h1>
           <p class="first__para">
             I'm a <b class="orange">Frontend Software Engineer</b> with a strong
             passion for building web applications with great user experiences.
             <br />
-            Here's a bit more <b>about me</b>.
+            Here's a bit more <b class="orange click" onclick="toggleModal()">about me</b>.
           </p>
           <div class="social__list">
             <a href="#" target="__blank" class="social__link click">
@@ -102,7 +102,8 @@
             <br />
             I currently work on extremely difficult engineering problems on a
             team of advanced professionals learning to excell to the forefront
-            of the frontend dev field.  I am focussed on creating functional and positive experiences for users.
+            of the frontend dev field. I am focussed on creating functional and
+            positive experiences for users.
           </p>
           <div class="modal__languages">
             <figure class="modal__language">
@@ -139,20 +140,21 @@
             </figure>
           </div>
         </div>
+
         <div class="modal__half modal__contact">
+          <i class="fas fa-times modal__exit click" onclick="modalExit()"></i>
           <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
           <h3 class="modal__sub-title modal__sub-title--contact">
             I'm currently open to new opportunities
           </h3>
-
           <form id="contact__form" onsubmit="contact(event)">
             <div class="form__item">
               <label class="form__item--label">Name</label>
-              <input class="input" name="user_name" type="text"  />
+              <input class="input" name="user_name" type="text" />
             </div>
             <div class="form__item">
               <label class="form__item--label">Email</label>
-              <input class="input" name="user_email" type="text"  />
+              <input class="input" name="user_email" type="text" />
             </div>
             <div class="form__item">
               <label class="form__item--label">Message</label>
@@ -175,9 +177,20 @@
             Thanks for the message! I'll speak to you soon.
           </div>
         </div>
-        <i class="fas fa-times modal__exit click"></i>
       </div>
     </section>
+
+<img src="./content/semi circle.svg" class="shape shape--0">
+<img src="./content/circle.svg" class="shape shape--1">
+<img src="./content/squiggly.svg" class="shape shape--2">
+<img src="./content/circle.svg" class="shape shape--3">
+<img src="./content//triangle.svg" class="shape shape--4">
+<img src="./content/circle.svg" class="shape shape--5">
+<img src="./content/squiggly.svg" class="shape shape--6">
+<img src="./content/circle.svg" class="shape shape--7">
+<img src="./content/semi circle.svg" class="shape shape--8">
+
+
     <section id="projects">
       <div class="container">
         <div class="row">
